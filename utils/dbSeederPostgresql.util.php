@@ -28,7 +28,6 @@ $pdo = new PDO($dsn, $username, $password, [
 // Seed logic starts here...
 echo "Seeding users…\n";
 
-// Updated query to match your actual table structure (no email, includes middle_name)
 $stmt = $pdo->prepare("
     INSERT INTO users (username, first_name, middle_name, last_name, password, role)
     VALUES (:username, :first_name, :middle_name, :last_name, :password, :role)

@@ -60,6 +60,12 @@ if (ob_get_level()) {
         <li><a href="/pages/privacy/index.php">Privacy Protocols</a></li>
         <li><a href="/pages/terms/index.php">Terms of Service</a></li>
         <li><a href="/pages/faq/index.php">Sacred Knowledge</a></li>
+        <?php if ($user && $user['role'] === 'admin'): ?>
+          <li><a href="/pages/admin/index.php">Admin Panel</a></li>
+        <?php endif; ?>
+        <?php if ($user): ?>
+          <li><a href="/pages/profile/index.php">Profile</a></li>
+        <?php endif; ?>
       </ul>
     </nav>
   </header>
@@ -67,8 +73,16 @@ if (ob_get_level()) {
   <main class="main-content">
     <section class="welcome-section">
       <div class="white-box bg-coggers-light">
-        <h2>Welcome back, <?= htmlspecialchars($user['first_name'] . ' ' . $user['last_name']) ?>!</h2>
-        <p>Role: <?= htmlspecialchars($user['role']) ?></p>
+        <?php if ($user && isset($user['first_name']) && isset($user['last_name'])): ?>
+          <h2>Welcome back, <?= htmlspecialchars($user['first_name'] . ' ' . $user['last_name']) ?>!</h2>
+          <p>Role: <?= htmlspecialchars(mapRoleToTitle($user['role']) ?? 'Tech-Priest') ?></p>
+          <?php if ($user['role'] === 'admin'): ?>
+            <p><i class="fas fa-crown"></i> <strong>Administrator Access Granted</strong></p>
+          <?php endif; ?>
+        <?php else: ?>
+          <h2>Welcome, Sacred Visitor!</h2>
+          <p>Please log in to access your blessed account.</p>
+        <?php endif; ?>
         <a href="/logout.php" class="btn btn-secondary">Sacred Logout</a>
       </div>
     </section>
@@ -110,7 +124,8 @@ if (ob_get_level()) {
             <img src="/assets/img/aldous.jpg" alt="Aldous Damaso">
           </div>
           <h3>Aldous Damaso</h3>
-          <h4>Lead Tech-Priest Biologis</h4>
+          <h4>Tech-Priest Biologis</h4>
+          <h4>FrontEnd and Designer</h4>
           <p>Master of sacred medical knowledge and blessed healing arts.</p>
         </div>
 
@@ -119,30 +134,35 @@ if (ob_get_level()) {
             <img src="/assets/img/van.jpg" alt="Van Navarez">
           </div>
           <h3>Van Navarez</h3>
-          <h4>Tech-Priest Logis</h4>
+          <h4>Lead Tech-Priest Logis</h4>
+          <h4>BackEnd and QA</h4>
           <p>Guardian of sacred supply chains and blessed logistics.</p>
         </div>
 
-        <div class="team-member white-box bg-nyebe">
+        <div class="team-member white-box bg-dragonite">
           <div class="member-image">
             <img src="/assets/img/jm.jpg" alt="JM Rivera">
           </div>
           <h3>JM Rivera</h3>
           <h4>Tech-Priest Manufactorum</h4>
+          <h4>Database</h4>
           <p>Master of blessed production and sacred manufacturing.</p>
         </div>
 
-        <div class="team-member white-box bg-smoke-orange">
+        <div class="team-member white-box bg-dragonite">
           <div class="member-image">
             <img src="/assets/img/oyo.jpg" alt="Oyo DeLemos">
           </div>
           <h3>Oyo DeLemos</h3>
           <h4>Tech-Priest Communis</h4>
+          <h4>QA</h4>
           <p>Keeper of sacred communications and customer relations.</p>
         </div>
       </div>
     </section>
   </main>
+
+  <?php include $_SERVER['DOCUMENT_ROOT'] . '/layouts/footer.layout.php'; ?>
 
 </body>
 </html>

@@ -391,6 +391,8 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 </script>
 
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/layouts/footer.layout.php'; ?>
+
 </body>
 </html>
 

@@ -153,6 +153,9 @@ ob_start();
       width: 20px;
     }
   </style>
+
+  <?php include $_SERVER['DOCUMENT_ROOT'] . '/layouts/footer.layout.php'; ?>
+
 </body>
 </html>
 

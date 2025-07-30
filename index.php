@@ -3,11 +3,9 @@ error_log("🌟 " . basename($_SERVER['SCRIPT_NAME']) . " starting - Session ID:
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-// Bootstrap already starts the session, so don't start it again
 require_once 'bootstrap.php';
 require_once 'utils/auth.util.php';
 
-// Get the current script name to make sure we're on the login page
 $currentScript = basename($_SERVER['SCRIPT_NAME']);
 $requestUri = $_SERVER['REQUEST_URI'];
 
@@ -28,22 +26,12 @@ $success = '';
 $showLoginForm = true;
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    if (isset($_POST['bypass'])) {
-        $_SESSION['simple_auth'] = true;
-        $_SESSION['simple_user'] = 'admin';
-
-        // Set full user data
-        $_SESSION['user'] = getAuthenticatedUser(); 
-
-        // Redirect immediately after successful bypass
-        header("Location: pages/home/index.php", true, 302);
-        exit;
-    } else {
+    // Quick Bypass functionality disabled
+    if (true) {
         $username = $_POST['username'] ?? '';
         $password = $_POST['password'] ?? '';
 
         if (authenticate($username, $password)) {
-            // Redirect immediately after successful login
             header("Location: pages/home/index.php", true, 302);
             exit;
         } else {
@@ -110,7 +98,8 @@ if (ob_get_level()) {
           </button>
         </form>
         
-        <!-- Development Bypass Button -->
+        <!-- Development Bypass Button - DISABLED -->
+        <!--
         <div class="bypass-section">
           <hr style="margin: 20px 0; border: 1px solid #ccc;">
           <p style="font-size: 0.9em; color: #666; margin-bottom: 10px;">Development Mode:</p>
@@ -120,10 +109,11 @@ if (ob_get_level()) {
             </button>
           </form>
         </div>
+        -->
         
         <div class="login-info">
           <h4>Test Credentials:</h4>
-          <p><strong>Admin:</strong> username: admin, password: password</p>
+          <p><strong>Admin:</strong> username: admin, password: admin123</p>
           <p><strong>User:</strong> username: john.smith, password: p@ssW0rd1234</p>
         </div>
         

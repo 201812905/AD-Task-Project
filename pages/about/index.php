@@ -122,6 +122,9 @@ ob_start();
       </div>
     </section>
   </main>
+
+  <?php include $_SERVER['DOCUMENT_ROOT'] . '/layouts/footer.layout.php'; ?>
+
 </body>
 </html>
 

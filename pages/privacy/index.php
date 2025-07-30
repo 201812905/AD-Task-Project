@@ -122,6 +122,9 @@ ob_start();
       line-height: 1.6;
     }
   </style>
+
+  <?php include $_SERVER['DOCUMENT_ROOT'] . '/layouts/footer.layout.php'; ?>
+
 </body>
 </html>
 

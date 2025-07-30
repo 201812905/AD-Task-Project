@@ -24,34 +24,52 @@ $pdo = new PDO($dsn, $username, $password, [
 ]);
 
 echo "Dropping old tables…\n";
-foreach ([
-  'orders',
-  'order_items',
-  'users',
-] as $table) {
-  // Use IF EXISTS to avoid errors
-  $pdo->exec("DROP TABLE IF EXISTS {$table} CASCADE;");
+
+// Drop tables in reverse dependency order to avoid foreign key conflicts
+$tablesToDrop = [
+    'order_items',    // Depends on orders
+    'orders',         // Depends on users
+    'users'           // Base table
+];
+
+foreach ($tablesToDrop as $table) {
+    try {
+        $pdo->exec("DROP TABLE IF EXISTS {$table} CASCADE;");
+        echo "✅ Dropped table {$table}\n";
+    } catch (PDOException $e) {
+        echo "⚠️  Warning dropping {$table}: " . $e->getMessage() . "\n";
+    }
 }
 
+// Define models in correct dependency order
 $models = [
-    'users.model.sql',
-    'projects.model.sql',
-    'project_users.model.sql',
-    'tasks.model.sql',
-    'orders.model.sql',
-    'orders_items.model.sql'
+    'users.model.sql',          // No dependencies - create first
+    'orders.model.sql',         // Depends on users
+    'order_items.model.sql'     // Depends on orders (note: corrected filename)
 ];
 
 foreach ($models as $filename) {
     $path = DATABASE_PATH . '/' . $filename;
+    
+    if (!file_exists($path)) {
+        echo "⚠️  Warning: Model file not found: {$filename}\n";
+        continue;
+    }
+    
     echo "Applying schema from {$path}…\n";
 
     $sql = file_get_contents($path);
     if ($sql === false) {
         throw new RuntimeException("❌ Could not read {$path}");
-    } else {
-        echo "✅ Creation Success from {$path}\n";
     }
 
-    $pdo->exec($sql);
+    try {
+        $pdo->exec($sql);
+        echo "✅ Creation Success from {$path}\n";
+    } catch (PDOException $e) {
+        echo "❌ Creation Failed from {$path}: " . $e->getMessage() . "\n";
+        throw $e;
+    }
 }
+
+echo "✅ Migration complete!\n";

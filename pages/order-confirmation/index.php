@@ -386,6 +386,9 @@ ob_start();
       displayOrderDetails();
     });
   </script>
+
+  <?php include $_SERVER['DOCUMENT_ROOT'] . '/layouts/footer.layout.php'; ?>
+
 </body>
 </html>
 

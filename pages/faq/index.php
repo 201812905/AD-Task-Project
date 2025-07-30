@@ -248,6 +248,9 @@ ob_start();
       });
     });
   </script>
+
+  <?php include $_SERVER['DOCUMENT_ROOT'] . '/layouts/footer.layout.php'; ?>
+
 </body>
 </html>
 

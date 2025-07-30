@@ -352,6 +352,9 @@ ob_start();
     `;
     document.head.appendChild(style);
   </script>
+
+  <?php include $_SERVER['DOCUMENT_ROOT'] . '/layouts/footer.layout.php'; ?>
+
 </body>
 </html>
 
