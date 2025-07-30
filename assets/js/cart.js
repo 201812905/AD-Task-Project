@@ -92,6 +92,24 @@ window.MechaCart = {
     },
 
     init: function() {
+        // Clear any old cart data that might have invalid product IDs
+        const cart = this.getCart();
+        if (cart && Object.keys(cart).length > 0) {
+            // Check if we have valid product data to validate against
+            if (typeof window.productsData !== 'undefined') {
+                const validCart = {};
+                for (const [productId, item] of Object.entries(cart)) {
+                    // Only keep cart items for products that still exist
+                    if (window.productsData[productId]) {
+                        validCart[productId] = item;
+                    }
+                }
+                if (Object.keys(validCart).length !== Object.keys(cart).length) {
+                    console.log('Cleaned up invalid cart items');
+                    this.saveCart(validCart);
+                }
+            }
+        }
         this.updateAllCartDisplays();
     }
 };

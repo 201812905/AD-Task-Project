@@ -1,15 +1,49 @@
 <?php
-// Cart utility functions
 
-
-
-// Initialize cart if it doesn't exist
 if (!isset($_SESSION['cart'])) {
     $_SESSION['cart'] = [];
 }
 
-// Sample products data
 function getProducts() {
+    global $pdo;
+    
+    try {
+        if (isset($pdo) && $pdo) {
+            $stmt = $pdo->prepare("SELECT * FROM products WHERE status = 'active' ORDER BY created_at DESC");
+            $stmt->execute();
+            $dbProducts = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            
+            if (!empty($dbProducts)) {
+                $products = [];
+                foreach ($dbProducts as $product) {
+                    $iconMap = [
+                        'Remedies' => 'fas fa-pills',
+                        'Medical Equipment' => 'fas fa-stethoscope', 
+                        'Supplements' => 'fas fa-capsules',
+                        'Equipment' => 'fas fa-user-md',
+                        'Rituals' => 'fas fa-fire',
+                        'Augmentation' => 'fas fa-cog',
+                        'Tools' => 'fas fa-tools'
+                    ];
+                    
+                    $products[$product['id']] = [
+                        'id' => $product['id'],
+                        'name' => $product['name'],
+                        'description' => $product['description'],
+                        'price' => (float)$product['price'],
+                        'stock_quantity' => (int)$product['stock_quantity'],
+                        'category' => strtolower(str_replace(' ', '', $product['category'] ?? 'equipment')),
+                        'icon' => $iconMap[$product['category']] ?? 'fas fa-box'
+                    ];
+                }
+                
+                return $products;
+            }
+        }
+    } catch (Exception $e) {
+        error_log("Error fetching products from database: " . $e->getMessage());
+    }
+    
     return [
         1 => [
             'id' => 1,

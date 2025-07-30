@@ -15,25 +15,25 @@ ob_start();
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-  <link rel="stylesheet" href="../../assets/css/style.css" />
-  <script src="../../assets/js/cart.js"></script>
-  <script src="../../assets/js/loading.js"></script>
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <script src="/assets/js/cart.js"></script>
+  <script src="/assets/js/loading.js"></script>
 </head>
 <body>
   <header class="header">
     <div class="top-bar">
       <div class="title">MECHANICUS HEALTH EMPORIUM</div>
-      <a href="../../pages/cart/index.php" class="cart" id="cart-link">Sacred Cart: ₱0.00</a>
+      <a href="/pages/cart/index.php" class="cart" id="cart-link">Sacred Cart: ₱0.00</a>
     </div>
     <nav class="nav-bar">
       <ul>
-        <li><a href="../../pages/home/index.php">Sacred Home</a></li>
-        <li><a href="../../pages/products/index.php">Blessed Products</a></li>
-        <li><a href="../../pages/about/index.php">The Sacred Creed</a></li>
-        <li><a href="../../pages/delivery/index.php" class="active">Imperial Delivery</a></li>
-        <li><a href="../../pages/privacy/index.php">Privacy Protocols</a></li>
-        <li><a href="../../pages/terms/index.php">Terms of Service</a></li>
-        <li><a href="../../pages/faq/index.php">Sacred Knowledge</a></li>
+        <li><a href="/pages/home/index.php">Sacred Home</a></li>
+        <li><a href="/pages/products/index.php">Blessed Products</a></li>
+        <li><a href="/pages/about/index.php">The Sacred Creed</a></li>
+        <li><a href="/pages/delivery/index.php" class="active">Imperial Delivery</a></li>
+        <li><a href="/pages/privacy/index.php">Privacy Protocols</a></li>
+        <li><a href="/pages/terms/index.php">Terms of Service</a></li>
+        <li><a href="/pages/faq/index.php">Sacred Knowledge</a></li>
       </ul>
     </nav>
   </header>

@@ -51,6 +51,7 @@ try {
     $stmt = $pdo->prepare("
         INSERT INTO orders (user_id, full_name, email, address, city, postal_code, payment_method, subtotal, tax, shipping, total, order_date)
         VALUES (:user_id, :full_name, :email, :address, :city, :postal_code, :payment_method, :subtotal, :tax, :shipping, :total, :order_date)
+        RETURNING id
     ");
 
     $stmt->execute([
@@ -69,7 +70,8 @@ try {
     ]);
 
     // Get the inserted order's ID
-    $orderDbId = $pdo->lastInsertId();
+    $result = $stmt->fetch(PDO::FETCH_ASSOC);
+    $orderDbId = (int)$result['id'];
 
     // Insert order items
     $itemStmt = $pdo->prepare("
@@ -87,10 +89,10 @@ try {
 
         $itemStmt->execute([
             ':order_id' => $orderDbId,
-            ':product_id' => $product['id'],
+            ':product_id' => (string)$product['id'], // Ensure UUID is string
             ':product_name' => $product['name'],
-            ':quantity' => $quantity,
-            ':price' => $product['price']
+            ':quantity' => (int)$quantity,
+            ':price' => (float)$product['price']
         ]);
     }
 

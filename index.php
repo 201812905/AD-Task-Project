@@ -1,5 +1,4 @@
 <?php
-error_log("🌟 " . basename($_SERVER['SCRIPT_NAME']) . " starting - Session ID: " . session_id());
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
@@ -9,7 +8,6 @@ require_once 'utils/auth.util.php';
 $currentScript = basename($_SERVER['SCRIPT_NAME']);
 $requestUri = $_SERVER['REQUEST_URI'];
 
-// Only check for redirect if we're specifically on the root index.php
 if ($currentScript === 'index.php' && ($requestUri === '/' || $requestUri === '/index.php')) {
     $loggedIn = isAuthenticated();
     if ($loggedIn) {
@@ -18,7 +16,6 @@ if ($currentScript === 'index.php' && ($requestUri === '/' || $requestUri === '/
     }
 }
 
-// Start output buffering after redirect check
 ob_start();
 
 $error = '';
@@ -26,21 +23,17 @@ $success = '';
 $showLoginForm = true;
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Quick Bypass functionality disabled
-    if (true) {
-        $username = $_POST['username'] ?? '';
-        $password = $_POST['password'] ?? '';
+    $username = $_POST['username'] ?? '';
+    $password = $_POST['password'] ?? '';
 
-        if (authenticate($username, $password)) {
-            header("Location: pages/home/index.php", true, 302);
-            exit;
-        } else {
-            $error = "❌ Invalid credentials.";
-        }
+    if (authenticate($username, $password)) {
+        header("Location: pages/home/index.php", true, 302);
+        exit;
+    } else {
+        $error = "❌ Invalid credentials.";
     }
 }
 
-// Clear any previous output that might have been generated
 if (ob_get_level()) {
     ob_clean();
 }
