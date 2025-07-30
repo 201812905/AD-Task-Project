@@ -2,27 +2,29 @@
 return [
     [
         'username' => 'admin',
-        'email' => 'admin@mechanicus.com',
+        'email' => 'admin@mechanicus.emporium',
         'first_name' => 'Admin',
+        'middle_name' => '',
         'last_name' => 'User',
-        'password' => 'password',
+        'password' => 'admin123',
         'role' => 'admin'
     ],
     [
         'username' => 'john.smith',
-        'email' => 'john.smith@mechanicus.com',
+        'email' => 'john.smith@mechanicus.emporium',
         'first_name' => 'John',
+        'middle_name' => 'Tech',
         'last_name' => 'Smith',
-        'password' => 'p@ssW0rd1234',
+        'password' => 'password123',
         'role' => 'user'
     ],
     [
         'username' => 'jm',
-        'email' => 'jm@mechanicus.com',
+        'email' => 'jm.rivera@mechanicus.emporium',
         'first_name' => 'JM',
+        'middle_name' => 'Sacred',
         'last_name' => 'Rivera',
-        'password' => '12345',
+        'password' => 'password123',
         'role' => 'user'
-    ],
-    // Add more users as needed
+    ]
 ];

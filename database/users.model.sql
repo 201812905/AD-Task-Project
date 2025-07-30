@@ -1,9 +1,12 @@
-CREATE TABLE IF NOT EXISTS public."users" (
-    id uuid NOT NULL PRIMARY KEY DEFAULT gen_random_uuid(),
-    first_name varchar(225) NOT NULL,
-    middle_name varchar(225),
-    last_name varchar(225) NOT NULL,
-    password varchar(225) NOT NULL,
-    username varchar(225) NOT NULL,
-    role varchar(225) NOT NULL
+CREATE TABLE users (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    username VARCHAR(225) NOT NULL UNIQUE,
+    email VARCHAR(225) UNIQUE,
+    first_name VARCHAR(225) NOT NULL,
+    middle_name VARCHAR(225),
+    last_name VARCHAR(225) NOT NULL,
+    password VARCHAR(225) NOT NULL,
+    role VARCHAR(225) NOT NULL DEFAULT 'user',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );

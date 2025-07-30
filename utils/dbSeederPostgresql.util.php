@@ -8,7 +8,7 @@ require_once 'vendor/autoload.php';
 require_once 'bootstrap.php';
 
 // 3) envSetter
-require_once UTILS_PATH . '/envSetter.util.php';
+$typeConfig = require_once UTILS_PATH . '/envSetter.util.php';
 
 // ✅ Load your dummy users
 $users = require_once DUMMIES_PATH . '/users.staticDatas.php';
@@ -28,20 +28,34 @@ $pdo = new PDO($dsn, $username, $password, [
 // Seed logic starts here...
 echo "Seeding users…\n";
 
+// Updated query to match your actual table structure (no email, includes middle_name)
 $stmt = $pdo->prepare("
-    INSERT INTO users (username, email, role, first_name, last_name, password)
-    VALUES (:username, :email, :role, :fn, :ln, :pw)
+    INSERT INTO users (username, first_name, middle_name, last_name, password, role)
+    VALUES (:username, :first_name, :middle_name, :last_name, :password, :role)
 ");
 
 foreach ($users as $u) {
-    $stmt->execute([
-        ':username' => $u['username'],
-        ':email' => $u['email'],
-        ':role' => $u['role'],
-        ':fn' => $u['first_name'],
-        ':ln' => $u['last_name'],
-        ':pw' => password_hash($u['password'], PASSWORD_DEFAULT),
-    ]);
+    try {
+        $stmt->execute([
+            ':username' => $u['username'],
+            ':first_name' => $u['first_name'] ?? '',
+            ':middle_name' => $u['middle_name'] ?? '', // Handle if not in dummy data
+            ':last_name' => $u['last_name'] ?? '',
+            ':password' => password_hash($u['password'], PASSWORD_DEFAULT),
+            ':role' => $u['role'] ?? 'user', // Default role if not specified
+        ]);
+        echo "✅ Inserted user: {$u['username']}\n";
+    } catch (PDOException $e) {
+        echo "❌ Failed to insert {$u['username']}: " . $e->getMessage() . "\n";
+        // Show what data we're trying to insert for debugging
+        echo "   Data: " . json_encode([
+            'username' => $u['username'],
+            'first_name' => $u['first_name'] ?? '',
+            'middle_name' => $u['middle_name'] ?? '',
+            'last_name' => $u['last_name'] ?? '',
+            'role' => $u['role'] ?? 'user'
+        ]) . "\n";
+    }
 }
 
 echo "✅ PostgreSQL seeding complete!\n";

@@ -1,5 +1,4 @@
 function createLoadingOverlay() {
-function createLoadingOverlay() {
   if (!document.getElementById('loading-overlay')) {
     const overlay = document.createElement('div');
     overlay.id = 'loading-overlay';
@@ -87,6 +86,9 @@ function initializeLoading() {
   addLoadingStyles();
   
   const loadingOverlay = document.getElementById('loading-overlay');
+  
+  // Show loading overlay initially
+  loadingOverlay.classList.add('active');
   
   window.addEventListener('load', function() {
     loadingOverlay.classList.remove('active');

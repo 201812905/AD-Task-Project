@@ -386,6 +386,54 @@ body {
     background-repeat: no-repeat !important;
 }
 
+.white-box.bg-asset1 {
+    background: 
+        linear-gradient(135deg, rgba(245, 245, 220, 0.3) 0%, rgba(248, 248, 255, 0.3) 100%),
+        url('../img/asset1.gif') center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.white-box.bg-asset2 {
+    background: 
+        linear-gradient(135deg, rgba(245, 245, 220, 0.3) 0%, rgba(248, 248, 255, 0.3) 100%),
+        url('../img/asset2.gif') center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.white-box.bg-asset3 {
+    background: 
+        linear-gradient(135deg, rgba(245, 245, 220, 0.3) 0%, rgba(248, 248, 255, 0.3) 100%),
+        url('../img/asset3.gif') center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.white-box.bg-asset4 {
+    background: 
+        linear-gradient(135deg, rgba(245, 245, 220, 0.3) 0%, rgba(248, 248, 255, 0.3) 100%),
+        url('../img/asset4.gif') center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.white-box.bg-asset5 {
+    background: 
+        linear-gradient(135deg, rgba(245, 245, 220, 0.3) 0%, rgba(248, 248, 255, 0.3) 100%),
+        url('../img/asset5.gif') center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.white-box.bg-asset6 {
+    background: 
+        linear-gradient(135deg, rgba(245, 245, 220, 0.3) 0%, rgba(248, 248, 255, 0.3) 100%),
+        url('../img/asset6.gif') center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 .banner .white-box.bg-smoke-red {
     background: url('../img/smoke_red.gif') center center !important;
     background-size: cover !important;
