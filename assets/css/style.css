@@ -1,4 +1,3 @@
-/* Warhammer Steampunk Healthcare Theme - Blended with Background */
 :root {
     --primary-gold: #DAA520;
     --dark-bronze: #8B4513;
@@ -10,7 +9,6 @@
     --steam-white: #F8F8FF;
     --brass: #B5A642;
     
-    /* Colors inspired by the background image */
     --bg-dark-green: #2d4a3e;
     --bg-teal: #4a7c7a;
     --bg-gray: #6b6b6b;
@@ -69,18 +67,10 @@ body {
     margin-left: 0.5rem;
 }
 
-/* ===========================
-   OVERLAY AND LAYOUT
-   ========================== */
-
 .overlay {
     position: relative;
     z-index: 1;
 }
-
-/* ===========================
-   BUTTONS
-   ========================== */
 
 .btn {
     display: inline-block;
@@ -139,7 +129,6 @@ body {
     transform: translateY(-2px);
 }
 
-/* Header Styling */
 .header {
     background: linear-gradient(135deg, var(--bg-dark-green) 0%, var(--bg-teal) 50%, var(--bg-red) 100%);
     box-shadow: 0 4px 20px rgba(0,0,0,0.6);
@@ -195,7 +184,6 @@ body {
     color: var(--primary-gold);
 }
 
-/* Navigation */
 .nav-bar {
     background: rgba(45, 74, 62, 0.6);
     padding: 15px 0;
@@ -259,13 +247,11 @@ body {
     opacity: 1;
 }
 
-/* Main Content */
 .main-content {
     padding: 40px 20px;
     min-height: calc(100vh - 200px);
 }
 
-/* Welcome Section */
 .welcome-section {
     margin-bottom: 40px;
     max-width: 1200px;
@@ -273,7 +259,6 @@ body {
     margin-right: auto;
 }
 
-/* Welcome Section - Default background */
 .welcome-section .white-box {
     background: 
         linear-gradient(135deg, rgba(245, 245, 220, 0.9) 0%, rgba(248, 248, 255, 0.9) 100%);
@@ -281,7 +266,6 @@ body {
     min-height: 150px;
 }
 
-/* Welcome Section - Custom background options */
 .welcome-section .white-box.bg-dragonite {
     background: 
         linear-gradient(135deg, rgba(245, 245, 220, 0.9) 0%, rgba(248, 248, 255, 0.9) 100%),
@@ -322,7 +306,6 @@ body {
     background-repeat: no-repeat !important;
 }
 
-/* Banner Section */
 .banner {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
@@ -333,7 +316,6 @@ body {
     margin-right: auto;
 }
 
-/* General white-box styling - Default background */
 .white-box {
     background: 
         linear-gradient(135deg, rgba(245, 245, 220, 0.85) 0%, rgba(248, 248, 255, 0.85) 100%);
@@ -357,7 +339,6 @@ body {
     color: var(--dark-metal);
 }
 
-/* Custom background options for white-box */
 .white-box.bg-dragonite {
     background: 
         linear-gradient(135deg, rgba(245, 245, 220, 0.85) 0%, rgba(248, 248, 255, 0.85) 100%),
@@ -405,21 +386,18 @@ body {
     background-repeat: no-repeat !important;
 }
 
-/* Banner specific smoke backgrounds for extra specificity */
 .banner .white-box.bg-smoke-red {
     background: url('../img/smoke_red.gif') center center !important;
     background-size: cover !important;
     background-repeat: no-repeat !important;
 }
 
-/* Make sure steam effect doesn't override background images */
 .steam-effect.bg-smoke-red {
     background: url('../img/smoke_red.gif') center center !important;
     background-size: cover !important;
     background-repeat: no-repeat !important;
 }
 
-/* Ultra-specific override for testing */
 .banner-left.white-box.bg-smoke-red,
 .banner-right.white-box.bg-smoke-red {
     background: red !important;
@@ -458,7 +436,6 @@ body {
         rgba(248, 248, 255, 0.98) 100%);
 }
 
-/* Banner-center custom backgrounds */
 .banner-center.bg-smoke-red {
     background: url('../img/smoke_red.gif') center center !important;
     background-size: cover !important;
@@ -577,7 +554,6 @@ body {
     box-shadow: 0 5px 15px rgba(139, 0, 0, 0.4);
 }
 
-/* Banner center paragraph styling */
 .banner-center p {
     font-size: 1.5em;
     color: var(--bg-teal);
@@ -587,7 +563,6 @@ body {
     font-style: italic;
 }
 
-/* Promo Section */
 .promo {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -598,7 +573,6 @@ body {
     margin-right: auto;
 }
 
-/* Promo Section - Default backgrounds */
 .promo-left {
     background: 
         linear-gradient(135deg, rgba(245, 245, 220, 0.85) 0%, rgba(74, 124, 122, 0.3) 50%, rgba(245, 245, 220, 0.85) 100%);
@@ -611,7 +585,6 @@ body {
     background-size: cover;
 }
 
-/* Promo Section - Custom background options */
 .promo-left.bg-dragonite {
     background: 
         linear-gradient(135deg, rgba(245, 245, 220, 0.85) 0%, rgba(74, 124, 122, 0.3) 50%, rgba(245, 245, 220, 0.85) 100%),
@@ -671,7 +644,6 @@ body {
     background-repeat: no-repeat !important;
 }
 
-/* Homepage-specific text overlays - ONLY for home page, NOT Sacred Creed */
 .home-page .promo-left::after {
     content: 'Sacred Discounts Available!';
     position: absolute;
@@ -703,7 +675,6 @@ body {
     font-style: italic;
 }
 
-/* Brands Section */
 .brands {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -713,7 +684,6 @@ body {
     margin-right: auto;
 }
 
-/* Brand boxes - Default background */
 .brand {
     min-height: 150px;
     font-family: 'Cinzel', serif;
@@ -727,7 +697,6 @@ body {
     text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
 }
 
-/* Brand boxes - Custom background options */
 .brand.bg-dragonite {
     background: 
         linear-gradient(135deg, rgba(245, 245, 220, 0.85) 0%, rgba(107, 107, 107, 0.2) 30%, rgba(122, 156, 181, 0.2) 70%, rgba(245, 245, 220, 0.85) 100%),
@@ -786,7 +755,6 @@ body {
     opacity: 0.5;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .title {
         font-size: 1.8em;
@@ -839,7 +807,6 @@ body {
     }
 }
 
-/* Steam Effects - Visual elements without animation */
 .steam-effect {
     position: relative;
     overflow: hidden;
@@ -861,7 +828,6 @@ body {
     pointer-events: none;
 }
 
-/* Reduce steam effect on smaller elements */
 .promo .white-box::before {
     content: '';
     position: absolute;
@@ -1019,5 +985,118 @@ body {
         padding: 30px 20px;
       }
     }
+
+.team-section {
+  margin: 60px 0 40px 0;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.team-header {
+  text-align: center;
+  margin-bottom: 50px;
+  padding: 40px;
+}
+
+.team-header h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 2.8em;
+  color: var(--imperial-red);
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.team-header p {
+  font-size: 1.3em;
+  color: var(--bg-teal);
+  font-style: italic;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.team-member {
+  text-align: center;
+  padding: 30px 20px;
+  transition: all 0.3s ease;
+}
+
+.team-member:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+}
+
+.member-image {
+  margin-bottom: 20px;
+}
+
+.member-image img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 3px solid var(--primary-gold);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+}
+
+.member-image img:hover {
+  transform: scale(1.1);
+  border-color: var(--imperial-red);
+}
+
+.team-member h3 {
+  font-family: 'Cinzel', serif;
+  font-size: 1.6em;
+  color: var(--imperial-red);
+  margin-bottom: 8px;
+}
+
+.team-member h4 {
+  font-family: 'Cinzel', serif;
+  font-size: 1.1em;
+  color: var(--primary-gold);
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.team-member p {
+  font-size: 1em;
+  line-height: 1.5;
+  color: var(--bg-teal);
+}
+
+@media (max-width: 768px) {
+  .team-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+
+  .team-header h2 {
+    font-size: 2.2em;
+  }
+
+  .team-member {
+    padding: 25px 15px;
+  }
+
+  .member-image img {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .team-header h2 {
+    font-size: 1.8em;
+  }
+}
 
     

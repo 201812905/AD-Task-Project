@@ -25,9 +25,8 @@ $pdo = new PDO($dsn, $username, $password, [
 
 echo "Dropping old tables…\n";
 foreach ([
-  'project_users',
-  'tasks',
-  'projects',
+  'orders',
+  'order_items',
   'users',
 ] as $table) {
   // Use IF EXISTS to avoid errors
@@ -39,6 +38,8 @@ $models = [
     'projects.model.sql',
     'project_users.model.sql',
     'tasks.model.sql',
+    'orders.model.sql',
+    'orders_items.model.sql'
 ];
 
 foreach ($models as $filename) {

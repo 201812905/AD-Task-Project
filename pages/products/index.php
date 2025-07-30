@@ -26,6 +26,7 @@ ob_start();
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
   <link rel="stylesheet" href="../../assets/css/style.css" />
   <script src="../../assets/js/cart.js"></script>
+  <script src="../../assets/js/loading.js"></script>
 </head>
 <body>
   <!-- HEADER -->

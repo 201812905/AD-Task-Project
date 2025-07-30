@@ -26,9 +26,8 @@ $pdo = new PDO($dsn, $username, $password, [
 // List of model files
 $models = [
     'users.model.sql',
-    'projects.model.sql',
-    'project_users.model.sql',
-    'tasks.model.sql',
+    'orders.model.sql',
+    'orders_items.model.sql'
 ];
 
 foreach ($models as $filename) {
@@ -47,7 +46,7 @@ foreach ($models as $filename) {
 
 // Truncate tables
 echo "Truncating tables…\n";
-foreach (['project_users', 'tasks', 'projects', 'users'] as $table) {
+foreach (['orders', 'order_items', 'users'] as $table) {
     $pdo->exec("TRUNCATE TABLE {$table} RESTART IDENTITY CASCADE;");
 }
 

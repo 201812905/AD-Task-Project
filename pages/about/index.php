@@ -32,6 +32,7 @@ ob_start();
   <!-- Custom Styles -->
   <link rel="stylesheet" href="../../assets/css/style.css" />
   <script src="../../assets/js/cart.js"></script>
+  <script src="../../assets/js/loading.js"></script>
 </head>
 <body>
   <!-- HEADER -->
