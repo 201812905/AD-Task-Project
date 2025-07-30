@@ -13,7 +13,7 @@
 </div>
 <!-- TODO: Make a short description -->
 <div align="center">
-  Healthcare Economy - Steampunk Design. (Optional)
+  Healthcare Economy - Steampunk Design.
 </div>
 
 <br />
