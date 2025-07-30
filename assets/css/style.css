@@ -273,12 +273,53 @@ body {
     margin-right: auto;
 }
 
+/* Welcome Section - Default background */
 .welcome-section .white-box {
     background: 
-        linear-gradient(135deg, rgba(245, 245, 220, 0.9) 0%, rgba(248, 248, 255, 0.9) 100%),
-        url('../img/Background.png') center center;
+        linear-gradient(135deg, rgba(245, 245, 220, 0.9) 0%, rgba(248, 248, 255, 0.9) 100%);
     background-size: cover;
     min-height: 150px;
+}
+
+/* Welcome Section - Custom background options */
+.welcome-section .white-box.bg-dragonite {
+    background: 
+        linear-gradient(135deg, rgba(245, 245, 220, 0.9) 0%, rgba(248, 248, 255, 0.9) 100%),
+        url('../img/Dragonite.png') center center;
+    background-size: cover;
+}
+
+.welcome-section .white-box.bg-steamhealth {
+    background: 
+        linear-gradient(135deg, rgba(245, 245, 220, 0.9) 0%, rgba(248, 248, 255, 0.9) 100%),
+        url('../img/steamhealthbg.png') center center;
+    background-size: cover;
+}
+
+.welcome-section .white-box.bg-smoke-red {
+    background: red !important;
+    background-image: url('../img/smoke_red.gif') !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+}
+
+.welcome-section .white-box.bg-smoke-orange {
+    background: url('../img/smoke_orange.gif') center center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+}
+
+.welcome-section .white-box.bg-coggers {
+    background: url('../img/coggers.gif') center center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+}
+
+.welcome-section .white-box.bg-nyebe {
+    background: url('../img/nyebe_white.png') center center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
 }
 
 /* Banner Section */
@@ -292,10 +333,10 @@ body {
     margin-right: auto;
 }
 
+/* General white-box styling - Default background */
 .white-box {
     background: 
-        linear-gradient(135deg, rgba(245, 245, 220, 0.85) 0%, rgba(248, 248, 255, 0.85) 100%),
-        url('../img/Background.png') center center;
+        linear-gradient(135deg, rgba(245, 245, 220, 0.85) 0%, rgba(248, 248, 255, 0.85) 100%);
     background-size: cover;
     border: 3px solid var(--primary-gold);
     border-radius: 15px;
@@ -314,6 +355,78 @@ body {
     transition: all 0.3s ease;
     backdrop-filter: blur(15px);
     color: var(--dark-metal);
+}
+
+/* Custom background options for white-box */
+.white-box.bg-dragonite {
+    background: 
+        linear-gradient(135deg, rgba(245, 245, 220, 0.85) 0%, rgba(248, 248, 255, 0.85) 100%),
+        url('../img/Dragonite.png') center center;
+    background-size: cover;
+}
+
+.white-box.bg-steamhealth {
+    background: 
+        linear-gradient(135deg, rgba(245, 245, 220, 0.85) 0%, rgba(248, 248, 255, 0.85) 100%),
+        url('../img/steamhealthbg.png') center center;
+    background-size: cover;
+}
+
+.white-box.bg-coggers {
+    background: 
+        linear-gradient(135deg, rgba(245, 245, 220, 0.85) 0%, rgba(248, 248, 255, 0.85) 100%),
+        url('../img/coggers.gif') center center;
+    background-size: cover;
+}
+
+.white-box.bg-coggers-light {
+    background: 
+        linear-gradient(135deg, rgba(245, 245, 220, 0.85) 0%, rgba(248, 248, 255, 0.85) 100%),
+        url('../img/coggers_light.gif') center center;
+    background-size: cover;
+}
+
+.white-box.bg-smoke-red {
+    background: url('../img/smoke_red.gif') center center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+}
+
+.white-box.bg-smoke-orange {
+    background: 
+        linear-gradient(135deg, rgba(245, 245, 220, 0.85) 0%, rgba(248, 248, 255, 0.85) 100%),
+        url('../img/smoke_orange.gif') center center !important;
+    background-size: cover !important;
+}
+
+.white-box.bg-creedbg {
+    background: url('../img/creedbg.jpg') center center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+}
+
+/* Banner specific smoke backgrounds for extra specificity */
+.banner .white-box.bg-smoke-red {
+    background: url('../img/smoke_red.gif') center center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+}
+
+/* Make sure steam effect doesn't override background images */
+.steam-effect.bg-smoke-red {
+    background: url('../img/smoke_red.gif') center center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+}
+
+/* Ultra-specific override for testing */
+.banner-left.white-box.bg-smoke-red,
+.banner-right.white-box.bg-smoke-red {
+    background: red !important;
+    background-image: url('../img/smoke_red.gif') !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
 }
 
 .white-box:hover {
@@ -343,6 +456,49 @@ body {
         rgba(122, 156, 181, 0.2) 30%,
         rgba(139, 68, 68, 0.2) 70%,
         rgba(248, 248, 255, 0.98) 100%);
+}
+
+/* Banner-center custom backgrounds */
+.banner-center.bg-smoke-red {
+    background: url('../img/smoke_red.gif') center center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+}
+
+.banner-center.bg-smoke-orange {
+    background: url('../img/smoke_orange.gif') center center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+}
+
+.banner-center.bg-dragonite {
+    background: url('../img/Dragonite.png') center center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+}
+
+.banner-center.bg-steamhealth {
+    background: url('../img/steamhealthbg.png') center center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+}
+
+.banner-center.bg-coggers {
+    background: url('../img/coggers.gif') center center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+}
+
+.banner-center.bg-nyebe {
+    background: url('../img/nyebe_white.png') center center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+}
+
+.banner-center.bg-creedbg {
+    background: url('../img/creedbg.jpg') center center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
 }
 
 .banner-center::after {
@@ -442,21 +598,81 @@ body {
     margin-right: auto;
 }
 
+/* Promo Section - Default backgrounds */
 .promo-left {
     background: 
-        linear-gradient(135deg, rgba(245, 245, 220, 0.85) 0%, rgba(74, 124, 122, 0.3) 50%, rgba(245, 245, 220, 0.85) 100%),
-        url('../img/Background.png') center center;
+        linear-gradient(135deg, rgba(245, 245, 220, 0.85) 0%, rgba(74, 124, 122, 0.3) 50%, rgba(245, 245, 220, 0.85) 100%);
     background-size: cover;
 }
 
 .promo-right {
     background: 
-        linear-gradient(135deg, rgba(245, 245, 220, 0.85) 0%, rgba(139, 68, 68, 0.3) 50%, rgba(245, 245, 220, 0.85) 100%),
-        url('../img/Background.png') center center;
+        linear-gradient(135deg, rgba(245, 245, 220, 0.85) 0%, rgba(139, 68, 68, 0.3) 50%, rgba(245, 245, 220, 0.85) 100%);
     background-size: cover;
 }
 
-.promo-left::after {
+/* Promo Section - Custom background options */
+.promo-left.bg-dragonite {
+    background: 
+        linear-gradient(135deg, rgba(245, 245, 220, 0.85) 0%, rgba(74, 124, 122, 0.3) 50%, rgba(245, 245, 220, 0.85) 100%),
+        url('../img/Dragonite.png') center center;
+    background-size: cover;
+}
+
+.promo-left.bg-steamhealth {
+    background: 
+        linear-gradient(135deg, rgba(245, 245, 220, 0.85) 0%, rgba(74, 124, 122, 0.3) 50%, rgba(245, 245, 220, 0.85) 100%),
+        url('../img/steamhealthbg.png') center center;
+    background-size: cover;
+}
+
+.promo-left.bg-smoke-orange {
+    background: url('../img/smoke_orange.gif') center center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+}
+
+.promo-right.bg-dragonite {
+    background: 
+        linear-gradient(135deg, rgba(245, 245, 220, 0.85) 0%, rgba(139, 68, 68, 0.3) 50%, rgba(245, 245, 220, 0.85) 100%),
+        url('../img/Dragonite.png') center center;
+    background-size: cover;
+}
+
+.promo-right.bg-steamhealth {
+    background: 
+        linear-gradient(135deg, rgba(245, 245, 220, 0.85) 0%, rgba(139, 68, 68, 0.3) 50%, rgba(245, 245, 220, 0.85) 100%),
+        url('../img/steamhealthbg.png') center center;
+    background-size: cover;
+}
+
+.promo-right.bg-smoke-red {
+    background: 
+        linear-gradient(135deg, rgba(245, 245, 220, 0.85) 0%, rgba(139, 68, 68, 0.3) 50%, rgba(245, 245, 220, 0.85) 100%),
+        url('../img/smoke_red.gif') center center;
+    background-size: cover;
+}
+
+.promo-right.bg-smoke-orange {
+    background: url('../img/smoke_orange.gif') center center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+}
+
+.promo-left.bg-creedbg {
+    background: url('../img/creedbg.jpg') center center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+}
+
+.promo-right.bg-creedbg {
+    background: url('../img/creedbg.jpg') center center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+}
+
+/* Homepage-specific text overlays - ONLY for home page, NOT Sacred Creed */
+.home-page .promo-left::after {
     content: 'Sacred Discounts Available!';
     position: absolute;
     top: 50%;
@@ -471,7 +687,7 @@ body {
         0 0 10px rgba(139, 68, 68, 0.6);
 }
 
-.promo-right::after {
+.home-page .promo-right::after {
     content: 'Blessed by the Omnissiah';
     position: absolute;
     top: 50%;
@@ -497,6 +713,7 @@ body {
     margin-right: auto;
 }
 
+/* Brand boxes - Default background */
 .brand {
     min-height: 150px;
     font-family: 'Cinzel', serif;
@@ -505,10 +722,58 @@ body {
     color: var(--bg-dark-green);
     position: relative;
     background: 
-        linear-gradient(135deg, rgba(245, 245, 220, 0.85) 0%, rgba(107, 107, 107, 0.2) 30%, rgba(122, 156, 181, 0.2) 70%, rgba(245, 245, 220, 0.85) 100%),
-        url('../img/Background.png') center center;
+        linear-gradient(135deg, rgba(245, 245, 220, 0.85) 0%, rgba(107, 107, 107, 0.2) 30%, rgba(122, 156, 181, 0.2) 70%, rgba(245, 245, 220, 0.85) 100%);
     background-size: cover;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+}
+
+/* Brand boxes - Custom background options */
+.brand.bg-dragonite {
+    background: 
+        linear-gradient(135deg, rgba(245, 245, 220, 0.85) 0%, rgba(107, 107, 107, 0.2) 30%, rgba(122, 156, 181, 0.2) 70%, rgba(245, 245, 220, 0.85) 100%),
+        url('../img/Dragonite.png') center center;
+    background-size: cover;
+}
+
+.brand.bg-steamhealth {
+    background: 
+        linear-gradient(135deg, rgba(245, 245, 220, 0.85) 0%, rgba(107, 107, 107, 0.2) 30%, rgba(122, 156, 181, 0.2) 70%, rgba(245, 245, 220, 0.85) 100%),
+        url('../img/steamhealthbg.png') center center;
+    background-size: cover;
+}
+
+.brand.bg-coggers {
+    background: 
+        linear-gradient(135deg, rgba(245, 245, 220, 0.85) 0%, rgba(107, 107, 107, 0.2) 30%, rgba(122, 156, 181, 0.2) 70%, rgba(245, 245, 220, 0.85) 100%),
+        url('../img/coggers.gif') center center;
+    background-size: cover;
+}
+
+.brand.bg-coggers-light {
+    background: 
+        linear-gradient(135deg, rgba(245, 245, 220, 0.85) 0%, rgba(107, 107, 107, 0.2) 30%, rgba(122, 156, 181, 0.2) 70%, rgba(245, 245, 220, 0.85) 100%),
+        url('../img/coggers_light.gif') center center;
+    background-size: cover;
+}
+
+.brand.bg-smoke-orange {
+    background: 
+        linear-gradient(135deg, rgba(245, 245, 220, 0.85) 0%, rgba(107, 107, 107, 0.2) 30%, rgba(122, 156, 181, 0.2) 70%, rgba(245, 245, 220, 0.85) 100%),
+        url('../img/smoke_orange.gif') center center;
+    background-size: cover;
+}
+
+.brand.bg-smoke-red {
+    background: 
+        linear-gradient(135deg, rgba(245, 245, 220, 0.85) 0%, rgba(107, 107, 107, 0.2) 30%, rgba(122, 156, 181, 0.2) 70%, rgba(245, 245, 220, 0.85) 100%),
+        url('../img/smoke_red.gif') center center;
+    background-size: cover;
+}
+
+.brand.bg-creedbg {
+    background: url('../img/creedbg.jpg') center center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
 }
 
 .brand::before {
@@ -612,3 +877,147 @@ body {
         transparent 100%);
     pointer-events: none;
 }
+
+
+    .login-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: calc(100vh - 200px);
+      padding: 40px 20px;
+    }
+
+    .login-box {
+      max-width: 500px;
+      width: 100%;
+      padding: 40px;
+      text-align: center;
+    }
+
+    .login-box h2 {
+      font-family: 'Cinzel', serif;
+      color: var(--imperial-red);
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+
+    .login-box p {
+      color: var(--dark-bronze);
+      margin-bottom: 30px;
+    }
+
+    .login-form {
+      text-align: left;
+      margin-bottom: 30px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+      color: var(--imperial-red);
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 12px 15px;
+      border: 2px solid var(--primary-gold);
+      border-radius: 25px;
+      font-size: 16px;
+      background: rgba(245, 245, 220, 0.5);
+      box-sizing: border-box;
+    }
+
+    .form-group input:focus {
+      outline: none;
+      border-color: var(--imperial-red);
+      box-shadow: 0 0 10px rgba(139, 0, 0, 0.3);
+    }
+
+    .btn {
+      padding: 12px 30px;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      font-weight: bold;
+      text-decoration: none;
+      display: inline-block;
+      text-align: center;
+      transition: all 0.3s ease;
+      font-size: 16px;
+      margin: 5px;
+    }
+
+    .btn-login {
+      background: linear-gradient(135deg, var(--imperial-red), var(--dark-bronze));
+      color: white;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+    .btn-bypass {
+      background: linear-gradient(135deg, var(--primary-gold), #f0d000);
+      color: var(--dark-bronze);
+      width: 100%;
+    }
+
+    .btn:hover {
+      transform: scale(1.02);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+
+    .error-message {
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      font-weight: bold;
+      background: rgba(220, 53, 69, 0.1);
+      border: 2px solid #dc3545;
+      color: #dc3545;
+    }
+
+    .login-info {
+      background: rgba(245, 245, 220, 0.3);
+      padding: 15px;
+      border-radius: 10px;
+      margin: 20px 0;
+      text-align: left;
+      font-size: 0.9em;
+    }
+
+    .login-info h4 {
+      color: var(--imperial-red);
+      margin-bottom: 10px;
+    }
+
+    .signup-link {
+      margin-top: 20px;
+      font-size: 0.9em;
+    }
+
+    .signup-link a {
+      color: var(--imperial-red);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .signup-link a:hover {
+      text-decoration: underline;
+    }
+
+    .bypass-section {
+      margin: 20px 0;
+    }
+
+    @media (max-width: 768px) {
+      .login-box {
+        margin: 20px;
+        padding: 30px 20px;
+      }
+    }
+
+    

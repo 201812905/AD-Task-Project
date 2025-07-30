@@ -57,11 +57,11 @@ ob_start();
   <main class="main-content">
     <!-- Sacred Creed Header -->
     <section class="banner">
-      <div class="banner-left white-box">
+      <div class="banner-left white-box bg-creedbg">
         <h3>The Omnissiah's Vision</h3>
         <p>Through sacred technology and blessed medicine, we serve the Emperor's will in healing the faithful.</p>
       </div>
-      <div class="banner-center white-box">
+      <div class="banner-center white-box bg-creedbg">
         <h1>THE SACRED CREED</h1>
         <p>Our Holy Mission and Divine Purpose</p>
         <div class="action-buttons">
@@ -69,7 +69,7 @@ ob_start();
           <a href="../../pages/delivery/index.php" class="btn btn-secondary">Imperial Delivery</a>
         </div>
       </div>
-      <div class="banner-right white-box">
+      <div class="banner-right white-box bg-creedbg">
         <h3>Imperial Standards</h3>
         <p>All our products meet the highest standards of the Adeptus Mechanicus and Imperial health protocols.</p>
       </div>
@@ -77,12 +77,12 @@ ob_start();
 
     <!-- Creed Principles -->
     <section class="promo">
-      <div class="promo-left white-box">
+      <div class="promo-left bg-creedbg white-box">
         <h2>The First Principle</h2>
         <p><strong>"Knowledge is Power, Guard it Well"</strong></p>
         <p>We preserve ancient medical wisdom and combine it with blessed technology to create superior healing solutions. Our research is sanctified by the Omnissiah and approved by Imperial authorities.</p>
       </div>
-      <div class="promo-right white-box">
+      <div class="promo-right bg-creedbg white-box">
         <h2>The Second Principle</h2>
         <p><strong>"The Flesh is Weak, but Faith is Strong"</strong></p>
         <p>While mortal bodies may fail, our blessed remedies strengthen both flesh and spirit. Each product is imbued with sacred oils and blessed by Tech-Priests before distribution.</p>
@@ -91,19 +91,19 @@ ob_start();
 
     <!-- Sacred Tenets -->
     <section class="brands">
-      <div class="brand white-box">
+      <div class="brand bg-creedbg white-box">
         <h3>Sacred Purity</h3>
         <p>All ingredients are purified through sacred rituals and tested in blessed laboratories.</p>
       </div>
-      <div class="brand white-box">
+      <div class="brand bg-creedbg white-box">
         <h3>Imperial Quality</h3>
         <p>Every product meets the exacting standards set forth by the Adeptus Mechanicus.</p>
       </div>
-      <div class="brand white-box">
+      <div class="brand bg-creedbg white-box">
         <h3>Blessed Efficacy</h3>
         <p>Our remedies are enhanced through prayer, incense, and the blessing of machine spirits.</p>
       </div>
-      <div class="brand white-box">
+      <div class="brand bg-creedbg white-box">
         <h3>Eternal Service</h3>
         <p>We serve the Emperor's will by bringing health and healing to His faithful subjects.</p>
       </div>
@@ -111,7 +111,7 @@ ob_start();
 
     <!-- Sacred Mission Statement -->
     <section class="banner">
-      <div class="banner-center white-box" style="grid-column: 1 / -1;">
+      <div class="banner-center white-box bg-creedbg" style="grid-column: 1 / -1;">
         <h2>Our Sacred Mission</h2>
         <p>The Mechanicus Health Emporium exists to serve the Emperor's faithful through the blessed union of ancient wisdom and sacred technology. We believe that health is a gift from the Omnissiah, and our duty is to preserve and enhance this gift through righteous means.</p>
         <br>

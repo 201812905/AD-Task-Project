@@ -43,7 +43,6 @@ ob_start();
         <li><a href="../../pages/privacy/index.php">Privacy Protocols</a></li>
         <li><a href="../../pages/terms/index.php">Terms of Service</a></li>
         <li><a href="../../pages/faq/index.php">Sacred Knowledge</a></li>
-        <li><a href="../../pages/cart/index.php">Sacred Cart</a></li>
       </ul>
     </nav>
   </header>
@@ -51,7 +50,7 @@ ob_start();
   <!-- MAIN CONTENT -->
   <main class="main-content">
     <section class="page-header">
-      <div class="white-box">
+      <div class="white-box bg-smoke-red">
         <h1>Blessed Products</h1>
         <p>Sacred healing supplies blessed by the Omnissiah</p>
       </div>

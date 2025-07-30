@@ -38,7 +38,6 @@ ob_start();
       <li><a href="../../pages/privacy/index.php">Privacy Protocols</a></li>
       <li><a href="../../pages/terms/index.php">Terms of Service</a></li>
       <li><a href="../../pages/faq/index.php">Sacred Knowledge</a></li>
-      <li><a href="../../pages/cart/index.php">Sacred Cart</a></li>
     </ul>
   </nav>
 </header>
@@ -127,7 +126,180 @@ ob_start();
     </div>
   </section>
 </main>
+  <style>
+    .page-header {
+      margin-bottom: 40px;
+      text-align: center;
+    }
 
+    .page-header h1 {
+      font-family: 'Cinzel', serif;
+      font-size: 3em;
+      color: var(--imperial-red);
+      margin-bottom: 10px;
+    }
+
+    .checkout-content {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .checkout-form {
+      padding: 40px;
+    }
+
+    .checkout-form h2,
+    .checkout-form h3 {
+      font-family: 'Cinzel', serif;
+      color: var(--imperial-red);
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: var(--dark-bronze);
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px;
+      border: 2px solid #ddd;
+      border-radius: 8px;
+      font-size: 16px;
+      transition: border-color 0.3s ease;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--primary-gold);
+    }
+
+    .payment-methods {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    .payment-option {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 15px;
+      border: 2px solid #ddd;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .payment-option:hover {
+      border-color: var(--primary-gold);
+    }
+
+    .payment-option input[type="radio"]:checked + span {
+      color: var(--imperial-red);
+      font-weight: bold;
+    }
+
+    .order-summary {
+      height: fit-content;
+      padding: 30px;
+    }
+
+    .order-summary h3 {
+      font-family: 'Cinzel', serif;
+      color: var(--imperial-red);
+      margin-bottom: 20px;
+    }
+
+    .summary-items {
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .checkout-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    .checkout-item:last-child {
+      border-bottom: none;
+    }
+
+    .summary-line {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    .summary-line.total {
+      font-weight: bold;
+      font-size: 1.2em;
+      color: var(--imperial-red);
+      border-top: 2px solid var(--primary-gold);
+      padding-top: 10px;
+      margin-top: 10px;
+    }
+
+    .btn {
+      padding: 15px 30px;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      font-weight: bold;
+      text-decoration: none;
+      display: inline-block;
+      text-align: center;
+      transition: all 0.3s ease;
+      width: 100%;
+      font-size: 16px;
+    }
+
+    .btn-complete {
+      background: linear-gradient(135deg, var(--imperial-red), var(--dark-bronze));
+      color: white;
+    }
+
+    .btn-complete:hover {
+      transform: scale(1.02);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+
+    @media (max-width: 768px) {
+      .checkout-content {
+        grid-template-columns: 1fr;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .payment-methods {
+        flex-direction: column;
+      }
+    }
+  </style>
 <script>
 document.addEventListener('DOMContentLoaded', function () {
   let currentTotals = { subtotal: 0, tax: 0, shipping: 0, total: 0 }; // Store current totals

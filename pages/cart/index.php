@@ -47,7 +47,6 @@ ob_start();
         <li><a href="../../pages/privacy/index.php">Privacy Protocols</a></li>
         <li><a href="../../pages/terms/index.php">Terms of Service</a></li>
         <li><a href="../../pages/faq/index.php">Sacred Knowledge</a></li>
-        <li><a href="../../pages/cart/index.php" class="active">Sacred Cart</a></li>
       </ul>
     </nav>
   </header>

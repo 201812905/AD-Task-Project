@@ -33,7 +33,6 @@ ob_start();
         <li><a href="../../pages/privacy/index.php">Privacy Protocols</a></li>
         <li><a href="../../pages/terms/index.php" class="active">Terms of Service</a></li>
         <li><a href="../../pages/faq/index.php">Sacred Knowledge</a></li>
-        <li><a href="../../pages/cart/index.php">Sacred Cart</a></li>
       </ul>
     </nav>
   </header>

@@ -4,31 +4,25 @@
 
 <br />
 <div align="center">
-<<<<<<< HEAD
-  <a href="https://github.com/201812905/AD-Task-Project">
-    <!-- Logo/Banner Image -->
-    <img src="assets/img/dragonite.png" alt="Healthcare Econ - Steampunk" width="130" height="100">
-=======
+  <a href="https://github.com/201812905/">
   <!-- TODO: If you want to add logo or banner you can add it here -->
-    <img src="./assets/img/Dragonite.png" alt="Dragonite" width="130" height="100">
->>>>>>> 970accd38aeb4431556e54234c54c46346cdcb58
+    <img src="./assets/img/Dragonite.png" alt="Nyebe" width="130" height="100">
   </a>
-  <!-- Project Title -->
-  <h3 align="center">Title</h3>
+<!-- TODO: Change Title to the name of the title of your Project -->
+  <h3 align="center">MECHANICUS HEALTH EMPORIUM</h3>
 </div>
-
-<!-- Short Description (Optional) -->
+<!-- TODO: Make a short description -->
 <div align="center">
-  Short Description. (Optional)
+  Healthcare Economy - Steampunk Design. (Optional)
 </div>
 
 <br />
 
 <!-- GitHub and Project Info -->
 <!-- Replace with your GitHub username and project folder name -->
-![](https://visit-counter.vercel.app/counter.png?page=zyx-0314/AD-CI4-Template-Project)
+![](https://visit-counter.vercel.app/counter.png?page=201812905/AD-Task-Project)
 
-[![wakatime](https://wakatime.com/badge/user/018dd99a-4985-4f98-8216-6ca6fe2ce0f8/project/63501637-9a31-42f0-960d-4d0ab47977f8.svg)](https://wakatime.com/badge/user/018dd99a-4985-4f98-8216-6ca6fe2ce0f8/project/63501637-9a31-42f0-960d-4d0ab47977f8)
+[![wakatime](https://wakatime.com/badge/user/856cf75b-eced-447f-ab8a-f49fe563f58b/project/5f199c2b-4ecd-426a-9a0c-105dfa36f53b.svg)](https://wakatime.com/badge/user/856cf75b-eced-447f-ab8a-f49fe563f58b/project/5f199c2b-4ecd-426a-9a0c-105dfa36f53b)
 
 ---
 
@@ -64,13 +58,28 @@
 ## Overview
 
 <!-- Project Description -->
-Description of the project in detail.
+MechaniCare is a PHP-based web application designed as a healthcare economy platform set in a steampunk-inspired world. It simulates a medical goods marketplace where users can browse, add to cart, and purchase various health-related inventions — from gear-powered prosthetics to alchemical tonics.
+
+The platform supports:
+
+User registration and login
+
+A cart system using localStorage
+
+A checkout process with order persistence
+
+A PostgreSQL-backed database for storing users, orders, and product data
+
+Dockerized setup for easy deployment
 
 ### Key Components
 
 <!-- List of Key Components -->
 - Authentication & Authorization
 - CRUD Operations for Inventory System
+- Cart System
+- Order History System
+- Checkout system
 
 ### Technology
 

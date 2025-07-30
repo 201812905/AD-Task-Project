@@ -2,6 +2,9 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
+require_once HANDLERS_PATH . '/mongodbChecker.handler.php';
+require_once HANDLERS_PATH . '/postgreChecker.handler.php';
+
 // Start output buffering to prevent any accidental output
 ob_start();
 

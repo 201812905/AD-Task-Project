@@ -37,7 +37,7 @@ if (ob_get_level()) {
   <link rel="stylesheet" href="../../assets/css/style.css" />
   <script src="../../assets/js/cart.js"></script>
 </head>
-<body>
+<body class="home-page">
   <!-- HEADER -->
   <header class="header">
     <div class="top-bar">
@@ -53,7 +53,6 @@ if (ob_get_level()) {
         <li><a href="../../pages/privacy/index.php">Privacy Protocols</a></li>
         <li><a href="../../pages/terms/index.php">Terms of Service</a></li>
         <li><a href="../../pages/faq/index.php">Sacred Knowledge</a></li>
-        <li><a href="../../pages/cart/index.php">Sacred Cart</a></li>
       </ul>
     </nav>
   </header>
@@ -62,7 +61,7 @@ if (ob_get_level()) {
   <main class="main-content">
     <!-- Welcome Section -->
     <section class="welcome-section">
-      <div class="white-box">
+      <div class="white-box bg-coggers-light">
         <h2>Welcome back, <?= htmlspecialchars($user['first_name'] . ' ' . $user['last_name']) ?>!</h2>
         <p>Role: <?= htmlspecialchars($user['role']) ?></p>
         <a href="../../logout.php" class="btn btn-secondary">Sacred Logout</a>
@@ -70,8 +69,8 @@ if (ob_get_level()) {
     </section>
 
     <section class="banner">
-      <div class="banner-left white-box steam-effect"></div>
-      <div class="banner-center white-box">
+      <div class="banner-left white-box bg-smoke-red"></div>
+      <div class="banner-center white-box bg-coggers">
         <h1>BLESSED HEALING</h1>
         <p>For the Emperor's Glory!</p>
         <div class="action-buttons">
@@ -79,19 +78,19 @@ if (ob_get_level()) {
           <a href="../../pages/about/index.php" class="btn btn-secondary">Learn Our Creed</a>
         </div>
       </div>
-      <div class="banner-right white-box steam-effect"></div>
+      <div class="banner-right white-box bg-smoke-red"></div>
     </section>
 
     <section class="promo">
-      <div class="promo-left white-box steam-effect"></div>
-      <div class="promo-right white-box steam-effect"></div>
+      <div class="promo-left bg-smoke-orange white-box steam-effect"></div>
+      <div class="promo-right bg-smoke-orange white-box steam-effect"></div>
     </section>
 
     <section class="brands">
-      <div class="brand white-box">Omnissiah Medical™</div>
-      <div class="brand white-box">AdMech Diagnostics™</div>
-      <div class="brand white-box">Imperial Remedies™</div>
-      <div class="brand white-box">Tech-Priest Solutions™</div>
+      <div class="brand bg-coggers-light white-box">Omnissiah Medical™</div>
+      <div class="brand bg-coggers-light white-box">AdMech Diagnostics™</div>
+      <div class="brand bg-coggers-light white-box">Imperial Remedies™</div>
+      <div class="brand bg-coggers-light white-box">Tech-Priest Solutions™</div>
     </section>
   </main>
 </body>
